@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDoc Summarization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>TDoc Digest </h1>
+    <h2>3GPP TDoc Abstractive Summary Generation Tool</h2>
+
+    <form method="post">
+        <label for="meeting_id">Meeting ID:</label>
+        <input type="text" id="meeting_id" name="meeting_id" class="input-small" value="{{ meeting_id }}" required>
+        <br><br>
+
+        <label for="tdoc_number">TDoc Number:</label>
+        <input type="text" id="tdoc_number" name="tdoc_number" value="{{ tdoc_number }}" required>
+        <br><br>
+
+        <button type="submit">Generate Summary</button>
+    </form>
+
+    {% if error_message %}
+        <p class="error-message">Error: {{ error_message }}</p>
+    {% endif %}
+
+    {% if text_summary %}
+        <h2>Abstractive Summary:</h2>
+        <p class="text-summary">{{ text_summary }}</p>
+    {% endif %}
+
+    {% if score %}
+        <p class="score-text">Semantic score: {{ score }}</p>
+    {% endif %}
+
+    <p id="progress-text" class="progress-text"></p> <!-- Placeholder for progress text -->
+</body>
+</html>

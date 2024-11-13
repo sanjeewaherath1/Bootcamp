@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    max-width: 800px;  /* Limit width to resemble A4 paper */
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 80%;  /* Adjust input width */
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.text-summary {
+    white-space: pre-wrap;  /* Preserve line breaks in text summary */
+    font-family: Arial, sans-serif; /* "Courier New", monospace; */
+    margin-bottom: 20px;
+}
+
+.score-text {
+    color: blue;  /* Blue color for the score text */
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.progress-text {
+    color: #ff8c00;  /* Orange color for visibility */
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+/* Define a smaller width for the input fields */
+.input-small {
+    width: 100px; !important /* Adjust this value to control the input box width */
+    max-width: 200px;
+    padding: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
